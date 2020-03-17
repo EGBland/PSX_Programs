@@ -14,3 +14,9 @@ This will package the entire program into a nice, neat .exe file.
 Run an .exe file in your favourite PSX emulator. [Mine is mednafen](https://mednafen.github.io/).
 
 If you want to run any of them on an actual console, [then you probably know how to do that already](http://www.psxdev.net/help/cdrom_mastering.html).
+
+## The programs
+### dispctrl
+Writes three lines of numbers to the screen. Made to test my rudimentary controller polling code.
+
+The first corresponds to the button presses on the controller at the time of the most recent poll, the second corresponds to the "last pressed" button(s) and the third is how many times `lkp_callback` has been called.
