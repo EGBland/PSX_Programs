@@ -4,11 +4,9 @@ A collection of programs intended to be run on a PS1 console or emulator, making
 Big thanks to the [PSXDEV.NET](http://psxdev.net/) forums and FAQs for providing the SDK, libraries and a plethora of helpful hints.
 
 ## Compiling the programs
-Each program's folder is standalone, with its own copy of necessary library code and an individual makefile.
+It's a bit of a finicky process that I intend to make easier once I learn how to properly use `ccpsx` and makefiles.
 
-[Assuming you've set up PsyQ already](http://www.psxdev.net/help/psyq_install.html), simply run `psymake` in the `<program>/src` folder.
-
-This will package the entire program into a nice, neat .exe file.
+To compile a program, the libraries in `/mylib` should first be compiled. Then, in the program root folder, make a `lib` and an `include` folder. Copy the `.obj` files from `/mylib/src` to the `lib` folder, and the `.h` files from `/mylib/src` to the `include` folder. Then, do `psymake` in the project root. This will place a `MAIN.EXE` file in the project's `build` folder.
 
 ## Using the programs
 Run an .exe file in your favourite PSX emulator. [Mine is mednafen](https://mednafen.github.io/).
